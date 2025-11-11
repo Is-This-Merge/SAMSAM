@@ -9,9 +9,19 @@
         body {
             background-color: var(--bg);
             margin: 0;
+            position: relative;
         }
 
-        /* 전체 중앙 정렬 */
+        /* 왼쪽 위 고정 */
+        #number {
+            position: absolute;
+            top: 30px;         /* 여백 */
+            left: 40px;        /* 여백 */
+            font-size: 50px;   /* 10px → 50px */
+            color: var(--text);
+        }
+
+        /* 중앙 정렬 */
         #container {
             display: flex;
             flex-direction: column;
@@ -20,28 +30,23 @@
             height: 100vh;
         }
 
-        #number {
-            font-size: 10px;
-            color: var(--text);
-        }
-
         #dab {
             color: var(--text);
-            font-size: 8px;
-            margin-top: 8px;
+            font-size: 40px;   /* 8px → 40px */
+            margin-top: 40px;  /* 8px → 40px */
         }
 
         #retry-btn {
-            width: 25px;
-            height: 25px;
+            width: 125px;          /* 25px → 125px */
+            height: 125px;         /* 25px → 125px */
             background-color: var(--tap);
             border: none;
-            border-radius: 9px;
+            border-radius: 45px;   /* 9px → 45px */
             color: var(--subtext);
-            font-size: 3px;
+            font-size: 15px;       /* 3px → 15px */
             cursor: pointer;
             transition: 0.2s;
-            margin-top: 15px;
+            margin-top: 75px;      /* 15px → 75px */
         }
 
         #retry-btn:hover {
@@ -50,9 +55,12 @@
     </style>
 </head>
 <body>
-    <div id="container">
-        <div id="number">Number 8.</div>
+    <!-- 왼쪽 위에 Number -->
+    <div id="number">Number 8.</div>
 
+    <!-- 중앙 정렬된 내용 -->
+    <div id="container">
+        <a href="quiz8.html"><button id="retry-btn">Next</button></a>
     </div>
 </body>
 </html>

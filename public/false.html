@@ -6,63 +6,68 @@
     <title>문제 맞추기</title>
     <link rel="stylesheet" href="../src/styles/common.css">
     <style>
-        body{
+        body {
             background-color: var(--bg);
+            margin: 0;
+            position: relative;
         }
-        #number{
-            font-size: 10px;
+
+        /* 왼쪽 위 고정 */
+        #number {
+            position: absolute;
+            top: 30px;        /* 여백 */
+            left: 40px;       /* 여백 */
+            font-size: 50px;  /* 10px → 50px */
             color: var(--text);
         }
-  #container {
-    display: flex;
-    flex-direction: column;    /* 세로 방향으로 정렬 */
-    justify-content: center;   /* 세로 가운데 */
-    align-items: center;       /* 가로 가운데 */
-    height: 80vh;             /* 전체 높이 한 번만! */
-    margin: 0;
-  }
 
-  #fail {
-    font-size: 8px;
-    color: var(-text);
-  }
-
-  #real {
-    font-size: 8px;
-    color: var(--text);
-    margin-top: 5px;          /* 글씨 사이 간격 조절 */
-  }                   /* 여백 제거 */
+        /* 중앙 정렬 */
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-          .button-container {
-    display: flex;               /* 가로로 배치 */
-    justify-content: center;     /* 가운데 정렬 */
-    gap: 20px;                   /* 버튼 사이 간격 */
-    margin-top: 4px;
-  }
-          #retry-btn {
-    width: 25px;                /* 정사각형 너비 */
-    height: 25px;               /* 정사각형 높이 */
-    background-color: var(--tap);   /* 버튼 색 */
-    border: none;
-    border-radius: 9px;         /* 모서리 살짝 둥글게 */
-    color: var(--subtext);
-    font-size: 3px;
-    cursor: pointer;
-    transition: 0.2s;
-    margin-top: 15px;           /* 글씨와 버튼 사이 간격 */
-  }
 
-  #retry-btn:hover {
-    background-color: var(--hov);   /* 호버 시 색 변화 */
-  }
+        #fail {
+            font-size: 40px;  /* 8px → 40px */
+            color: var(--text);
+        }
+
+        #real {
+            font-size: 40px;  /* 8px → 40px */
+            color: var(--text);
+            margin-top: 25px; /* 5px → 25px */
+        }
+
+        #retry-btn {
+            width: 125px;         /* 25px → 125px */
+            height: 125px;        /* 25px → 125px */
+            background-color: var(--tap);
+            border: none;
+            border-radius: 45px;  /* 9px → 45px */
+            color: var(--subtext);
+            font-size: 15px;      /* 3px → 15px */
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 75px;     /* 15px → 75px */
+        }
+
+        #retry-btn:hover {
+            background-color: var(--hov);
+        }
     </style>
 </head>
 <body>
-    <div id="number">
-        Number 7.
-        <div id="container">
-  <div id="fail">틀렸습니다 ❌</div>
-  <div id="real">정답은 고라니</div>
+    <!-- 왼쪽 위에 고정 -->
+    <div id="number">Number 7.</div>
+
+    <!-- 중앙 정렬된 내용 -->
+    <div id="container">
+        <div id="fail">틀렸습니다 ❌</div>
+        <div id="real">정답은 고라니</div>
         <a href="next_quiz.html"><button id="retry-btn">Next</button></a>
+    </div>
 </body>
 </html>
