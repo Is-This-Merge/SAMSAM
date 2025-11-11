@@ -98,7 +98,7 @@
 		/* 검색 필터 기능 */
 		const searchInput = document.getElementById("searchInput");
 		searchInput.addEventListener("input", () => {
-			const keyword = searchInput.value.trim().toLowerCase().replace(/\s+/g, ""); // 🔹 띄어쓰기 제거
+			const keyword = searchInput.value.trim().toLowerCase().replace(/\s+/g, "");
 			const filtered = quizData.filter(card => {
 				const title = card.title.toLowerCase().replace(/\s+/g, "");
 				const desc = card.desc.toLowerCase().replace(/\s+/g, "");
