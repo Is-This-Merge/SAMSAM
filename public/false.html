@@ -13,10 +13,25 @@
             font-size: 10px;
             color: var(--text);
         }
-        #sulmyung{
-            font-size: 5px;
-            color: var(--subtext);
-            margin-top: 4px;
+  #container {
+    display: flex;
+    flex-direction: column;    /* 세로 방향으로 정렬 */
+    justify-content: center;   /* 세로 가운데 */
+    align-items: center;       /* 가로 가운데 */
+    height: 80vh;             /* 전체 높이 한 번만! */
+    margin: 0;
+  }
+
+  #fail {
+    font-size: 8px;
+    color: var(-text);
+  }
+
+  #real {
+    font-size: 8px;
+    color: var(--text);
+    margin-top: 5px;          /* 글씨 사이 간격 조절 */
+  }                   /* 여백 제거 */
         }
           .button-container {
     display: flex;               /* 가로로 배치 */
@@ -24,8 +39,7 @@
     gap: 20px;                   /* 버튼 사이 간격 */
     margin-top: 4px;
   }
-
-  .square-btn {
+          #retry-btn {
     width: 25px;                /* 정사각형 너비 */
     height: 25px;               /* 정사각형 높이 */
     background-color: var(--tap);   /* 버튼 색 */
@@ -35,9 +49,10 @@
     font-size: 3px;
     cursor: pointer;
     transition: 0.2s;
+    margin-top: 15px;           /* 글씨와 버튼 사이 간격 */
   }
 
-  .square-btn:hover {
+  #retry-btn:hover {
     background-color: var(--hov);   /* 호버 시 색 변화 */
   }
     </style>
@@ -45,16 +60,9 @@
 <body>
     <div id="number">
         Number 7.
-    </div>
-    <img src="../src/assets/image/고라니.jpeg" alt="고라니" width="120" style="display:block; margin:auto;">
-    <div id="sulmyung">
-        이 동물은 우리나라의 사슴들 중 가장 작은 크기를 갖고 있으며, 양쪽의 큰 엄니가 특징이다. 세종과학예술영재학교의 최무진 학생이 통학에 이용한다는 사실이 밝혀지며 큰 파장을 일으키기도 한 이 동물의 이름은 무엇일까?
-    </div>
-    <div class="button-container">
-  <a href="answer.html"><button class="square-btn">고라니</button></a>
-  <a href="false.html"><button class="square-btn">자라니</button></a>
-  <a href="false.html"><button class="square-btn">미나리</button></a>
-  <a href="false.html"><button class="square-btn">뭐라니?</button></a>
-</div>
+        <div id="container">
+  <div id="fail">틀렸습니다 ❌</div>
+  <div id="real">정답은 고라니</div>
+        <a href="next_quiz.html"><button id="retry-btn">Next</button></a>
 </body>
 </html>

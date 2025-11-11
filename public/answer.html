@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 맞추기</title>
+    <link rel="stylesheet" href="../src/styles/common.css">
+    <style>
+        body {
+            background-color: var(--bg);
+            margin: 0;
+        }
+
+        /* 전체 중앙 정렬 */
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #number {
+            font-size: 10px;
+            color: var(--text);
+        }
+
+        #dab {
+            color: var(--text);
+            font-size: 8px;
+            margin-top: 8px;
+        }
+
+        #retry-btn {
+            width: 25px;
+            height: 25px;
+            background-color: var(--tap);
+            border: none;
+            border-radius: 9px;
+            color: var(--subtext);
+            font-size: 3px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 15px;
+        }
+
+        #retry-btn:hover {
+            background-color: var(--hov);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="number">Number 7.</div>
+        <div id="dab">정답!</div>
+        <a href="next_quiz.html"><button id="retry-btn">Next</button></a>
+    </div>
+</body>
+</html>

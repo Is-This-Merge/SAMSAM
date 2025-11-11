@@ -1,12 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>페이지 제목 입력</title>
-    <link rel="stylesheet" href="../src/styles/common.css">
+  <meta charset="UTF-8" />
+  <title>Google Login (PKCE, No Backend)</title>
 </head>
 <body>
-    
+  <h1>Google 로그인 (서버 없이, PKCE 방식)</h1>
+  <button id="login">Google로 로그인</button>
+  <pre id="result"></pre>
+
+  <script>
+    const CLIENT_ID = "805933627185-9ahk8gr3rln3ce550ktn43d400t5vh7d.apps.googleusercontent.com"; // ← 여기에 교체
+    const REDIRECT_URI = "http://127.0.0.1:5500/public/login.html";
+    const TOKEN_URL = "https://oauth2.googleapis.com/token";
+    const AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth";
+    const SCOPE = "openid email profile";
+
+    // 랜덤 문자열 생성
+    function generateRandomString(length = 64) {
+      const arr = new Uint8Array(length);
+      crypto.getRandomValues(arr);
+      return Array.from(arr, b => ('0' + b.toString(16)).slice(-2)).join('');
+    }
+
+    // SHA256 → Base64URL 인코딩
+    async function sha256(str) {
+      const encoder = new TextEncoder();
+      const data = encoder.encode(str);
+      const digest = await crypto.subtle.digest("SHA-256", data);
+      const hashArray = Array.from(new Uint8Array(digest));
+      const base64 = btoa(String.fromCharCode(...hashArray));
+      return base64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    }
+
+    // Google 로그인 시작
+    async function startLogin() {
+      const code_verifier = generateRandomString();
+      const code_challenge = await sha256(code_verifier);
+      localStorage.setItem("code_verifier", code_verifier);
+
+      const params = new URLSearchParams({
+        client_id: CLIENT_ID,
+        redirect_uri: REDIRECT_URI,
+        response_type: "code",
+        scope: SCOPE,
+        code_challenge: code_challenge,
+        code_challenge_method: "S256",
+      });
+
+      window.location = `${AUTH_URL}?${params.toString()}`;
+    }
+
+    // 로그인 후 돌아왔을 때 처리
+    async function handleRedirect() {
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get("code");
+      if (!code) return; // 로그인 안 했으면 종료
+
+      const code_verifier = localStorage.getItem("code_verifier");
+      if (!code_verifier) {
+        document.getElementById("result").textContent = "❌ code_verifier 없음. 새로 로그인 해보세요.";
+        return;
+      }
+
+      const body = new URLSearchParams({
+        client_id: CLIENT_ID,
+        code: code,
+        code_verifier: code_verifier,
+        redirect_uri: REDIRECT_URI,
+        grant_type: "authorization_code",
+      });
+
+      const res = await fetch(TOKEN_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body,
+      });
+
+      const data = await res.json();
+      console.log("Token response:", data);
+
+      if (!data.id_token) {
+        document.getElementById("result").textContent =
+          "⚠️ id_token 없음!\n\n응답:\n" + JSON.stringify(data, null, 2);
+        return;
+      }
+
+      // JWT 디코드 (payload만)
+      const user = parseJwt(data.id_token);
+      document.getElementById("result").textContent = JSON.stringify(user, null, 2);
+    }
+
+    function parseJwt(token) {
+      const base64 = token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
+      const json = decodeURIComponent(atob(base64).split('').map(c =>
+        '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+      ).join(''));
+      return JSON.parse(json);
+    }
+
+    document.getElementById("login").addEventListener("click", startLogin);
+    handleRedirect(); // 페이지 로드 시 code 처리
+  </script>
 </body>
 </html>
