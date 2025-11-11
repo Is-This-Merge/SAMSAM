@@ -2,33 +2,115 @@
 <html>
 <head>
     <link rel="stylesheet" href="../src/styles/common.css">
+	<link rel="stylesheet" href="../src/styles/home.css">
     <title>SAMSAM</title>
 </head>
 <body>
-	<div id="app">
-		<header>
-			<div class="header-logo"></div>
-			<nav>
+	<header>
+		<nav class="tap">
+			<div class="logo">
+				<a href="../index.html">
+					<img src="../src/assets/image/samsamicon.png" alt="SAMSAM" title="SAMSAM">
+				</a>
+        	</div>
+        	<a class="btn" href="./categorysearch.html">검색</a>
+			<a class="btn" href="./create.html">제작대</a>
+			<a class="btn" href="./inventory.html">인벤토리</a>
+			<a class="btn" href="./info.html">정보</a>
+			<div id="user-btn" class="btn"></div>
+    	</nav>
+	</header>
 
-			</nav>
-			<div class="header-functions">
-				<a href="./categorysearch.html">검색</a>
-				<a href="./create.html">제작대</a>
-				<a href="./inventory.html">인벤토리</a>
-				<a href="./info.html">info</a>
-				<a href="./mypage.html">마이페이지</a>
-				<a href="./login.html">회원가입과 로그인</a>
-			</div>
-		</header>
-		<main>
-			<section>
-				<div class="section-toggle"></div>
-			</section>
-			<div class="front"></div>
-		</main>
-		<footer>
-			<div class="footer-info"></div>
-		</footer>
+	<!-- 중앙 검색 박스 -->
+	<div class="search-box">
+		<input type="text" id="searchInput" placeholder="검색어를 입력하세요...">
 	</div>
+
+	<!-- 퀴즈 카드 영역 -->
+	<main>
+		<div class="card-container" id="cardContainer"></div>
+	</main>
+
+	<footer>
+		<div class="footer-info"></div>
+	</footer>
+
+	<script>
+		/* 로그인 상태 표시 */
+		const isLoggedIn = false; 
+		const userBtn = document.getElementById("user-btn");
+		userBtn.innerHTML = isLoggedIn
+			? `<a style="color:rgb(53, 39, 25); text-decoration:none; margin:0; width:100%; height:100%;" href="./mypage.html">마이페이지</a>`
+			: `<a style="color:rgb(53, 39, 25); text-decoration:none; margin:0; width:100%; height:100%;" href="./login.html">회원가입/로그인</a>`;
+
+		/* 카드 데이터 */
+		const quizData = [
+			{
+				title: "미적분 퀴즈",
+				desc: "기본적인 미분과 적분 개념을 테스트해보세요.",
+				keywords: ["수학", "미적분", "함수"]
+			},
+			{
+				title: "물리 운동 법칙",
+				desc: "F=ma, 관성, 마찰력에 대한 퀴즈입니다.",
+				keywords: ["물리", "운동", "뉴턴", "법칙"]
+			},
+			{
+				title: "화학 주기율표",
+				desc: "원소의 주기적 성질과 족/주기를 맞춰보세요.",
+				keywords: ["화학", "주기율표", "원자"]
+			},
+			{
+				title: "생물 세포 구조",
+				desc: "세포 소기관과 유전 과정에 관한 문제입니다.",
+				keywords: ["생물", "세포", "유전"]
+			},
+			{
+				title: "지구과학 별자리",
+				desc: "별의 분류, 거리, 밝기에 대한 퀴즈입니다.",
+				keywords: ["지구과학", "별", "천문학", "우주"]
+			}
+		];
+
+		/* 카드 렌더링 함수 */
+		const cardContainer = document.getElementById("cardContainer");
+
+		function renderCards(cards) {
+			cardContainer.innerHTML = "";
+			if (cards.length === 0) {
+				cardContainer.innerHTML = `<p style="text-align:center; grid-column:1 / -1; color:#5c4b3b;">검색 결과가 없습니다.</p>`;
+				return;
+			}
+			cards.forEach(card => {
+				const el = document.createElement("div");
+				el.className = "card";
+				el.innerHTML = `
+					<h3>${card.title}</h3>
+					<p>${card.desc}</p>
+				`;
+				cardContainer.appendChild(el);
+			});
+		}
+
+		// 초기 렌더링
+		renderCards(quizData);
+
+		/* 검색 필터 기능 */
+		const searchInput = document.getElementById("searchInput");
+		searchInput.addEventListener("input", () => {
+			const keyword = searchInput.value.trim().toLowerCase().replace(/\s+/g, "");
+			const filtered = quizData.filter(card => {
+				const title = card.title.toLowerCase().replace(/\s+/g, "");
+				const desc = card.desc.toLowerCase().replace(/\s+/g, "");
+				const keys = card.keywords.map(k => k.toLowerCase().replace(/\s+/g, ""));
+				return (
+					title.includes(keyword) ||
+					desc.includes(keyword) ||
+					keys.some(k => k.includes(keyword))
+				);
+			});
+			renderCards(filtered);
+		});
+	</script>
 </body>
 </html>

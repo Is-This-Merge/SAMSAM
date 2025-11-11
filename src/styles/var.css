@@ -1,0 +1,10 @@
+:root{
+    --bg: #f9f4ed;
+    --tap: #f5e6d2;
+    --shadow: #d8b689;
+    --text: rgb(53, 39, 25);
+    --subtext: #5c4b3b;
+    --hov: #e7d0b2;
+    --card: #ffffff;
+    --radius: 12px;
+}
