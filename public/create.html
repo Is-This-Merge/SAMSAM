@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>페이지 제목 입력</title>
+    <title>제작대</title>
     <link rel="stylesheet" href="../src/styles/common.css">
+    <style>
+		.tap{
+			display:grid;
+			height: 70%;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+			text-align:center;
+			align-content:center;
+			justify-items:center;
+			background:#e5c79d;
+			padding: 0.4%;
+			border-bottom: 4px solid #d4be9f;
+		}
+
+		.btn{
+			font-family: Pretendard-Regular, Arial, system-ui, sans-serif;
+			font-weight: 600;
+			font-size: large;
+			color:rgb(53, 39, 25);
+			text-decoration:none;
+			width:8%;
+			margin:20%;
+		}
+		.btn:hover{
+			background-color: #d4be9f;
+		}
+
+	</style>
 </head>
-<body>
-    
+<body style="margin:0; background-color:#ebe0d2">
+    <header style="margin:0;" class="tap">
+
+        <h1>
+            작업대
+        </h1>
+    </header>
+    <ul style="margin:0;">
+        <li>
+            퀴즈 제목
+        </li>
+        <li>과목</li>
+        <li>퀴즈 설명</li>
+        <li>문항 개수</li>
+    </ul>
+    <button class="btn">
+        만들기
+    </button>
 </body>
 </html>
