@@ -40,8 +40,8 @@
 		const isLoggedIn = false; 
 		const userBtn = document.getElementById("user-btn");
 		userBtn.innerHTML = isLoggedIn
-			? `<a style="color:rgb(53, 39, 25); text-decoration:none; margin:0; width:100%;" href="./mypage.html">마이페이지</a>`
-			: `<a style="color:rgb(53, 39, 25); text-decoration:none; margin:0; width:100%;" href="./login.html">회원가입/로그인</a>`;
+			? `<a style="color:rgb(53, 39, 25); text-decoration:none; margin:0; width:100%; height:100%;" href="./mypage.html">마이페이지</a>`
+			: `<a style="color:rgb(53, 39, 25); text-decoration:none; margin:0; width:100%; height:100%;" href="./login.html">회원가입/로그인</a>`;
 
 		/* 카드 데이터 */
 		const quizData = [
@@ -98,12 +98,17 @@
 		/* 검색 필터 기능 */
 		const searchInput = document.getElementById("searchInput");
 		searchInput.addEventListener("input", () => {
-			const keyword = searchInput.value.trim().toLowerCase();
-			const filtered = quizData.filter(card =>
-				card.title.toLowerCase().includes(keyword) ||
-				card.desc.toLowerCase().includes(keyword) ||
-				card.keywords.some(k => k.toLowerCase().includes(keyword))
-			);
+			const keyword = searchInput.value.trim().toLowerCase().replace(/\s+/g, ""); // 🔹 띄어쓰기 제거
+			const filtered = quizData.filter(card => {
+				const title = card.title.toLowerCase().replace(/\s+/g, "");
+				const desc = card.desc.toLowerCase().replace(/\s+/g, "");
+				const keys = card.keywords.map(k => k.toLowerCase().replace(/\s+/g, ""));
+				return (
+					title.includes(keyword) ||
+					desc.includes(keyword) ||
+					keys.some(k => k.includes(keyword))
+				);
+			});
 			renderCards(filtered);
 		});
 	</script>
