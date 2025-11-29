@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>페이지 제목 입력</title>
+    <title>문제 맞추기</title>
     <link rel="stylesheet" href="../src/styles/common.css">
+    <style>
+        body{
+            background-color: var(--bg);
+        }
+        #number{
+            font-size: 50px;          /* 10px → 50px */
+            color: var(--text);
+        }
+        #sulmyung{
+            font-size: 25px;          /* 5px → 25px */
+            color: var(--subtext);
+            margin-top: 20px;         /* 4px → 20px */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 100px;               /* 20px → 100px */
+            margin-top: 20px;         /* 4px → 20px */
+        }
+        .square-btn {
+            width: 125px;             /* 25px → 125px */
+            height: 125px;            /* 25px → 125px */
+            background-color: var(--tap);
+            border: none;
+            border-radius: 45px;      /* 9px → 45px */
+            color: var(--subtext);
+            font-size: 15px;          /* 3px → 15px */
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .square-btn:hover {
+            background-color: var(--hov);
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="number">
+        Number 7.
+    </div>
+    <img src="../src/assets/image/고라니.jpeg" alt="고라니" width="600" style="display:block; margin:auto;"> <!-- 120 → 600 -->
+    <div id="sulmyung">
+        이 동물은 우리나라의 사슴들 중 가장 작은 크기를 갖고 있으며, 양쪽의 큰 엄니가 특징이다. 세종과학예술영재학교의 최무진 학생이 통학에 이용한다는 사실이 밝혀지며 큰 파장을 일으키기도 한 이 동물의 이름은 무엇일까?
+    </div>
+    <div class="button-container">
+        <a href="answer.html"><button class="square-btn">고라니</button></a>
+        <a href="false.html"><button class="square-btn">자라니</button></a>
+        <a href="false.html"><button class="square-btn">미나리</button></a>
+        <a href="false.html"><button class="square-btn">뭐라니?</button></a>
+    </div>
 </body>
 </html>

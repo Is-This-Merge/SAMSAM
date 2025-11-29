@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 맞추기</title>
+    <link rel="stylesheet" href="../src/styles/common.css">
+    <style>
+        body {
+            background-color: var(--bg);
+            margin: 0;
+            position: relative;
+        }
+
+        /* 왼쪽 위 고정 */
+        #number {
+            position: absolute;
+            top: 30px;        /* 여백 */
+            left: 40px;       /* 여백 */
+            font-size: 50px;  /* 10px → 50px */
+            color: var(--text);
+        }
+
+        /* 중앙 정렬 */
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #fail {
+            font-size: 40px;  /* 8px → 40px */
+            color: var(--text);
+        }
+
+        #real {
+            font-size: 40px;  /* 8px → 40px */
+            color: var(--text);
+            margin-top: 25px; /* 5px → 25px */
+        }
+
+        #retry-btn {
+            width: 125px;         /* 25px → 125px */
+            height: 125px;        /* 25px → 125px */
+            background-color: var(--tap);
+            border: none;
+            border-radius: 45px;  /* 9px → 45px */
+            color: var(--subtext);
+            font-size: 15px;      /* 3px → 15px */
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 75px;     /* 15px → 75px */
+        }
+
+        #retry-btn:hover {
+            background-color: var(--hov);
+        }
+    </style>
+</head>
+<body>
+    <!-- 왼쪽 위에 고정 -->
+    <div id="number">Number 7.</div>
+
+    <!-- 중앙 정렬된 내용 -->
+    <div id="container">
+        <div id="fail">틀렸습니다 ❌</div>
+        <div id="real">정답은 고라니</div>
+        <a href="next_quiz.html"><button id="retry-btn">Next</button></a>
+    </div>
+</body>
+</html>

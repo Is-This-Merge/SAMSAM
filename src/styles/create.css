@@ -1,0 +1,36 @@
+.makingq {
+    color: var(--text);
+    margin-top: 20px;
+}
+.makingbtn{
+    color:var(--text);
+    width:60px;
+    height:30px;
+    margin-top:20px;
+    margin-left:50px;
+    background:var(--shadow);
+    border:1px solid
+    border-color:var(--text);
+    border-radius:var(--radius);  
+    outline: none;   
+}
+.makingbtn:hover{
+    color:var(--card);
+    transform: translateY(-2px);
+    background:var(--hov);    
+    box-shadow: 0 2.5px 0 0 var(--shadow);
+}
+textarea {
+  width: 95%;              /* 부모 요소 기준으로 가로 꽉 채움 */
+  height: 60px;             /* 일정한 세로 높이 */
+  resize: none;             /* 크기 조절 금지 (원하면 'both'로 바꾸기) */
+  padding: 10px;            /* 안쪽 여백 */
+  border: 2px solid #ddd;   /* 부드러운 테두리 */
+  border-radius: 8px;       /* */
+  font-size: 15px;          /* 글자 크기 */
+  font-family: "Pretendard", sans-serif;
+  box-sizing: border-box;   /* padding 포함한 크기 계산 */
+  outline: none;            /* 포커스 시 파란 외곽선 제거 */
+  transition: all 0.2s ease;
+  background-color: #fefefe;
+}
