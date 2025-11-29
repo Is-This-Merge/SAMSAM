@@ -70,6 +70,11 @@
 				title: "지구과학 별자리",
 				desc: "별의 분류, 거리, 밝기에 대한 퀴즈입니다.",
 				keywords: ["지구과학", "별", "천문학", "우주"]
+			},
+			{
+				title: "동물 맞추기 퀴즈",
+				desc: "우리 주변에서 볼 수 있는 다양한 동물을 맞춰보세요.",
+				keywords: ["동물", "세종"]
 			}
 		];
 
@@ -85,13 +90,25 @@
 			cards.forEach(card => {
 				const el = document.createElement("div");
 				el.className = "card";
+
+				const query = encodeURIComponent(card.title);  
+				// 카드 클릭 → quiz.html?title=카드제목 이동
+
 				el.innerHTML = `
 					<h3>${card.title}</h3>
 					<p>${card.desc}</p>
 				`;
+
+				el.style.cursor = "pointer";
+				el.addEventListener("click", () => {
+					window.location.href = `./quiz.html?title=${query}`;
+				});
+
 				cardContainer.appendChild(el);
 			});
+			
 		}
+		
 
 		// 초기 렌더링
 		renderCards(quizData);
