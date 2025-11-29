@@ -3,11 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <title>Google Login</title>
+  <style>
+    /* ===== 전체 레이아웃 ===== */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Noto Sans KR", sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    /* ===== 구글 로그인 버튼 ===== */
+    #login {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      color: #444;
+      border: 1px solid #dadce0;
+      padding: 12px 26px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    }
+    
+    #login:hover {
+      background: #f8f9fa;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    #login:active {
+      transform: scale(0.98);
+    }
+
+    /* Google 아이콘 */
+    #login::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url('https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg');
+      background-size: cover;
+    }
+
+    /* 결과 출력 박스 */
+    #result {
+      margin-top: 30px;
+      padding: 16px;
+      width: 300px;
+      min-height: 60px;
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid #e4e4e4;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      font-size: 14px;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
   <h1>Google로 로그인</h1>
   <button id="login">Google로 로그인</button>
-  <pre id="result"></pre>
+  <pre id="result">Log In With Google Account</pre>
 
   <script>
     const CLIENT_ID = "805933627185-9ahk8gr3rln3ce550ktn43d400t5vh7d.apps.googleusercontent.com"; // ← 여기에 교체
