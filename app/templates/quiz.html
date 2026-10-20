@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}퀴즈 학습 · SAMSAM{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{{ asset_url('styles/quiz.css') }}">{% endblock %}
+
+{% block content %}
+<div class="study-shell shell">
+    <section id="loading" class="study-loading" aria-live="polite">학습 세트를 준비하고 있어요…</section>
+    <section id="article-setup" class="article-setup" hidden>
+        <a class="back-link" data-back-to-set href="{{ url_for('main.index') }}#discover">← 학습 방식 선택</a>
+        <h1>본문으로 빈칸 만들기</h1>
+        <p>첨부한 PDF 기사의 전체 본문이 기본으로 제공됩니다. 내용을 수정하거나 다른 영어 본문을 붙여 넣을 수도 있습니다. 빈칸과 보기는 시작할 때 자동으로 만들어집니다.</p>
+        <form id="article-setup-form">
+            <label for="article-text">학습할 본문</label>
+            <textarea id="article-text" rows="12" maxlength="30000" required spellcheck="false"></textarea>
+            <small id="article-input-source"></small>
+            <div class="article-settings">
+                <label>한 화면의 본문 범위
+                    <select id="article-chunk"><option value="0">입력한 본문 전체</option><option value="40">40단어씩 나누기</option><option value="80" selected>80단어씩 나누기</option><option value="120">120단어씩 나누기</option></select>
+                </label>
+                <label>범위당 빈칸 수 <input id="article-blank-count" type="number" min="1" max="10" value="3" required></label>
+            </div>
+            <p>빈칸마다 보기에서 답을 고릅니다. 맞힌 빈칸은 채워 두고, 틀린 빈칸만 다시 풉니다. 남은 본문이 짧으면 가능한 만큼만 생성합니다.</p>
+            <p id="article-setup-error" role="alert" hidden></p>
+            <button id="article-start" class="button button-primary" type="submit">빈칸 생성하고 시작</button>
+        </form>
+    </section>
+
+    <section id="study-view" hidden>
+        <header class="study-head">
+            <a href="{{ url_for('main.index') }}#discover" data-back-to-set class="back-link">← 학습 방식</a>
+            <span id="study-subject" class="study-subject"></span>
+            <h1 id="study-title"></h1>
+            <p id="study-description"></p>
+        </header>
+
+        <div class="progress-row">
+            <span id="question-progress">1 / 1</span>
+            <div class="progress-track" role="progressbar" aria-label="학습 완료 문항" aria-valuemin="0" aria-valuenow="0" aria-valuemax="1"><span id="progress-bar"></span></div>
+        </div>
+
+        <article class="question-stage">
+            <div class="question-reading">
+            <span id="question-kicker" class="question-kicker"></span>
+            <img id="question-image" class="question-image" alt="문항 첨부 이미지" hidden>
+            <h2 id="question-prompt" tabindex="0"></h2>
+            <nav id="passage-pages" class="passage-pages" aria-label="긴 본문 나누어 읽기">
+                <button id="passage-prev" class="button button-secondary" type="button">← 앞부분</button>
+                <span id="passage-page-count" aria-live="polite"></span>
+                <button id="passage-next" class="button button-secondary" type="button">뒷부분 →</button>
+            </nav>
+            <p id="question-source" class="question-source" hidden></p>
+            </div>
+            <div class="question-answering">
+            <div id="answer-options" class="answer-options"></div>
+            <div id="answer-feedback" class="answer-feedback" role="status" aria-live="polite" hidden></div>
+            </div>
+        </article>
+
+        <div class="study-actions">
+            <small id="mistake-save-notice" role="status" hidden></small>
+            <p class="question-source"><kbd>1</kbd>–<kbd>6</kbd> 보기 선택 <span aria-hidden="true"> · </span><kbd>Enter</kbd> 확인 / 다음</p>
+            <button id="next-question" class="button button-primary button-large" type="button" disabled>다음 문항</button>
+        </div>
+    </section>
+
+    <section id="result-view" class="result-view" hidden>
+        <span class="result-icon" aria-hidden="true">✓</span>
+        <span class="eyebrow">학습 완료</span>
+        <h1>모든 문항을 맞혔어요!</h1>
+        <div class="score-ring"><strong id="result-score">0</strong><span>점</span></div>
+        <p id="result-summary"></p>
+        <details class="result-details"><summary>답안과 해설 펼쳐 보기</summary><div id="result-review" class="result-review"></div></details>
+        <div class="result-actions">
+            <a class="button button-secondary" href="{{ url_for('main.mistakes_page') }}">오답 많은 순으로 보기</a>
+            <button id="retry-quiz" class="button button-secondary button-large" type="button">전체 다시 풀기</button>
+            <button id="edit-article" class="button button-secondary" type="button" hidden>본문·빈칸 설정 변경</button>
+            <a id="match-game-link" class="button button-secondary button-large" href="#">매치 게임</a>
+            <a data-back-to-set class="button button-secondary" href="#">다른 방식으로 학습</a>
+            <a class="button button-primary button-large" href="{{ url_for('main.index') }}#discover">다른 퀴즈 찾기</a>
+        </div>
+    </section>
+
+    <section id="error-view" class="empty-state" hidden>
+        <h1>퀴즈를 열 수 없어요</h1>
+        <p id="error-message"></p>
+        <a class="button button-primary" href="{{ url_for('main.index') }}#discover">목록으로 돌아가기</a>
+    </section>
+</div>
+{% endblock %}
+
+{% block scripts %}<script type="module" src="{{ asset_url('pages/quiz.js') }}"></script>{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}내 학습실 · SAMSAM{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{{ asset_url('styles/account.css') }}">{% endblock %}
+{% macro quiz_actions(quiz, owner=false) %}
+<div class="card-actions">
+    <a class="text-link" href="{{ url_for('main.quiz_page') }}?id={{ quiz.id }}">학습</a>
+    <a class="text-link" href="{{ url_for('main.match_page') }}?id={{ quiz.id }}">매치 게임</a>
+    <a class="text-link" href="{{ url_for('main.create_page') }}?id={{ quiz.id }}">수정</a>
+    {% if owner %}<button class="delete-quiz text-button danger" type="button">삭제</button>{% endif %}
+</div>
+{% endmacro %}
+{% block content %}
+<div class="account-page shell">
+    <header class="account-heading">
+        <div><span class="eyebrow">나의 학습 공간</span><h1>내 학습실</h1><p class="empty-copy">만든 자료, 함께하는 공부, 쌓여 가는 기록을 한곳에서.</p></div>
+        <a class="button button-primary" href="{{ url_for('main.create_page') }}">+ 새 퀴즈</a>
+    </header>
+    <section aria-labelledby="my-quizzes">
+        <div class="section-heading"><div><span class="eyebrow">내가 만든 자료</span><h2 id="my-quizzes">내 퀴즈</h2></div><span id="owned-count">{{ quizzes|length }}개</span></div>
+        <div id="owned-quizzes" class="inventory-grid">
+            {% for quiz in quizzes %}
+            <article class="inventory-card" data-quiz-id="{{ quiz.id }}">
+                <small>{{ quiz.subject }} · {{ quiz.questions|length }}문항 · {{ '공개' if quiz.visibility == 'public' else '비공개' }}</small>
+                <h3>{{ quiz.title }}</h3><p>{{ quiz.description or '설명이 없습니다.' }}</p>
+                {{ quiz_actions(quiz, true) }}
+                <form class="share-form"><label class="visually-hidden" for="share-{{ quiz.id }}">공동 편집자 이메일</label><input id="share-{{ quiz.id }}" type="email" placeholder="가입한 사용자 이메일" required><button class="button button-secondary" type="submit">공유</button><small class="share-message" role="status"></small></form>
+            </article>
+            {% endfor %}
+            <div id="owned-empty" class="empty-panel"{% if quizzes %} hidden{% endif %}><strong>아직 만든 퀴즈가 없어요.</strong><p>첫 학습 세트를 만들어 보세요.</p></div>
+        </div>
+    </section>
+    <section aria-labelledby="shared-quizzes">
+        <div class="section-heading"><div><span class="eyebrow">함께 만든 자료</span><h2 id="shared-quizzes">공유받은 퀴즈</h2></div><span>{{ shared_quizzes|length }}개</span></div>
+        <div class="inventory-grid">
+            {% for quiz in shared_quizzes %}<article class="inventory-card"><small>{{ quiz.subject }} · 공동 편집</small><h3>{{ quiz.title }}</h3><p>{{ quiz.description or '설명이 없습니다.' }}</p>{{ quiz_actions(quiz) }}</article>
+            {% else %}<div class="empty-panel"><strong>공유받은 퀴즈가 없어요.</strong><p>친구가 이메일로 초대하면 여기에 표시됩니다.</p></div>{% endfor %}
+        </div>
+    </section>
+    <section aria-labelledby="study-history">
+        <div class="section-heading"><div><span class="eyebrow">최근 활동</span><h2 id="study-history">최근 학습 기록</h2></div></div>
+        <div class="history-list">
+            {% for attempt in attempts %}<a href="{{ url_for('main.quiz_page') }}?id={{ attempt.quiz_set_id }}"><span><strong>{{ attempt.quiz_set.title }}</strong><small>{{ attempt.completed_at.strftime('%Y-%m-%d %H:%M') }}</small></span><b>{{ attempt.score }}점</b></a>
+            {% else %}<div class="empty-panel"><strong>아직 학습 기록이 없어요.</strong><p>퀴즈를 풀면 결과가 차곡차곡 쌓입니다.</p></div>{% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}
+{% block scripts %}<script type="module" src="{{ asset_url('pages/inventory.js') }}"></script>{% endblock %}

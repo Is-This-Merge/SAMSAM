@@ -1,0 +1,10 @@
+.match-page { max-width: 980px; padding-top: 48px; }
+.match-page header { text-align: center; }
+.match-page h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.2rem); }
+.match-page header p { color: var(--subtext); font-weight: 800; }
+.match-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 32px; }
+.match-tile { min-height: 120px; padding: 14px; border: 2px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--text); font-weight: 800; cursor: pointer; }
+.match-tile:hover, .match-tile.selected { border-color: var(--primary); background: var(--primary-light); }
+.match-tile.matched { visibility: hidden; }
+.match-result { margin-top: 28px; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); text-align: center; }
+@media (max-width: 700px) { .match-board { grid-template-columns: repeat(2, 1fr); } .match-tile { min-height: 100px; } }

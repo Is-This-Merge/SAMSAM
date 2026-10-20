@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}SAMSAM{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{{ asset_url('styles/home.css') }}">{% endblock %}
+{% block content %}
+<section class="hero shell">
+    <div class="hero-copy">
+        <span class="eyebrow">조금씩, 확실하게 · 사암사암</span>
+        <h1>오늘 배운 것을<br><span>내 것으로 만드는 시간.</span></h1>
+        <p>단어부터 긴 글까지, 나에게 맞는 방식으로.<br>맞힌 문제는 덜어내고 헷갈리는 것에 집중하세요.</p>
+        <div class="hero-actions">
+            <a class="button button-primary button-large" href="#discover">학습 세트 둘러보기 <span aria-hidden="true">↗</span></a>
+            {% if current_user %}<a class="button button-secondary button-large" href="{{ url_for('main.inventory') }}">내 학습실</a>{% else %}<a class="button button-secondary button-large" href="{{ url_for('main.create_page') }}">나만의 퀴즈 만들기</a>{% endif %}
+        </div>
+        <p class="hero-note">공개 세트는 로그인 없이 바로 학습할 수 있어요.</p>
+    </div>
+    <div id="study-preview" class="study-preview" aria-label="공개 퀴즈 미리보기" aria-live="polite" aria-busy="true">
+        <div class="preview-top">
+            <div><span id="preview-title">퀴즈를 고르는 중</span><small id="preview-counter">-- / --</small></div>
+            <button id="preview-refresh" type="button" aria-label="다른 퀴즈 미리보기">다른 퀴즈</button>
+        </div>
+        <button id="preview-card" class="preview-card" type="button" aria-pressed="false">
+            <span id="preview-subject" class="subject-dot">공개 퀴즈</span>
+            <img id="preview-image" class="preview-image" alt="미리보기 문항 이미지" hidden>
+            <strong id="preview-question" class="preview-front">미리보기를 불러오고 있어요.</strong>
+            <strong id="preview-answer" class="preview-back" hidden></strong>
+            <span id="preview-hint" class="preview-hint">잠시만 기다려 주세요</span>
+        </button>
+        <div class="preview-controls">
+            <button id="preview-previous" type="button" aria-label="이전 문제"><span aria-hidden="true">←</span><span>이전</span></button>
+            <div class="preview-progress" aria-hidden="true"><span id="preview-progress-bar"></span></div>
+            <button id="preview-next" type="button" aria-label="다음 문제"><span>다음</span><span aria-hidden="true">→</span></button>
+        </div>
+        <a id="preview-start" class="preview-start" href="#discover" hidden>이 퀴즈 학습하기</a>
+    </div>
+</section>
+<section class="mode-strip" aria-label="학습 방식">
+    <div class="shell mode-list">
+        <div><span>01</span><strong>기억 꺼내기</strong><small>카드 · 뜻 입력</small></div>
+        <div><span>02</span><strong>문맥 읽기</strong><small>랜덤 빈칸</small></div>
+        <div><span>03</span><strong>문장 만들기</strong><small>단어 배열</small></div>
+        <div><span>04</span><strong>이해 확인하기</strong><small>문단 해석 매칭</small></div>
+    </div>
+</section>
+<section id="discover" class="discover shell" aria-labelledby="discover-title">
+    <div class="section-title"><div><span class="eyebrow">공개 학습 세트</span><h2 id="discover-title">무엇을 공부할까요?</h2></div><span id="result-count" class="result-count" aria-live="polite"></span></div>
+    <form id="search-form" class="search-panel" role="search"><label class="search-field" for="search-input"><span aria-hidden="true">⌕</span><span class="visually-hidden">학습 세트 검색</span><input id="search-input" type="search" autocomplete="off" placeholder="제목, 과목 또는 키워드로 찾아보세요"></label><button class="button button-primary" type="submit">검색</button></form>
+    <div id="subject-filters" class="subject-filters" aria-label="실제 공개 퀴즈 과목 필터"><button class="filter-chip active" type="button" data-subject="">전체</button></div>
+    <div id="quiz-grid" class="quiz-grid" aria-live="polite" aria-busy="true"></div>
+    <div id="empty-state" class="empty-state" hidden><span aria-hidden="true">◇</span><h3>검색 결과가 없어요</h3><p>검색어를 줄이거나 다른 과목을 선택해 보세요.</p><button id="search-reset" class="button button-secondary" type="button">검색 조건 초기화</button><button id="search-retry" class="button button-primary" type="button" hidden>다시 불러오기</button></div>
+</section>
+{% endblock %}
+{% block scripts %}<script type="module" src="{{ asset_url('pages/home.js') }}"></script>{% endblock %}

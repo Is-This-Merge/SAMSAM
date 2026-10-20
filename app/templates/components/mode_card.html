@@ -1,0 +1,7 @@
+{% macro mode_card(id, icon, category, title, description, primary=false, available=false) %}
+<a id="{{ id }}" class="learning-mode-card{{ ' primary-mode' if primary else '' }}" href="#"{% if not available %} hidden{% endif %}>
+    <div class="mode-card-top"><span class="mode-icon" aria-hidden="true">{{ icon }}</span><span>{{ category }}</span>{% if primary %}<span class="mode-badge">처음이라면</span>{% endif %}</div>
+    <strong>{{ title }}</strong><small>{{ description }}</small>
+    <b>시작하기 <span aria-hidden="true">↗</span></b>
+</a>
+{% endmacro %}

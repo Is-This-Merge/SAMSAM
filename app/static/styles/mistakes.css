@@ -1,0 +1,28 @@
+.mistakes-page { padding-top: 40px; }
+.mistakes-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.mistakes-heading h1 { margin: 0; font-size: 2.3rem; letter-spacing: -.045em; }
+.mistakes-heading p, .mistakes-footer p { color: var(--subtext); }
+.local-note { padding: 14px 18px; background: var(--primary-light); border-radius: var(--radius); color: var(--primary-dark); font-size: .82rem; }
+.local-note.error { color: var(--danger); background: var(--danger-light); }
+.mistake-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; margin: 26px 0 18px; }
+.mistake-filters label { display: grid; gap: 5px; font-size: .78rem; font-weight: 650; min-width: 160px; max-width: 100%; }
+.mistake-search { flex: 1; }
+.mistake-filters input, .mistake-filters select { width: 100%; min-width: 0; max-width: 320px; min-height: 42px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); }
+.mistake-search input { max-width: none; }
+.mistakes-summary, .mistake-card-top, .mistake-card-bottom, .mistakes-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.mistakes-summary { color: var(--subtext); font-size: .8rem; }
+.mistake-list { display: grid; gap: 14px; }
+.mistake-card { padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.mistake-card-top { justify-content: flex-start; }
+.mistake-rank { color: var(--subtext); font-variant-numeric: tabular-nums; }
+.mistake-count { color: var(--danger); background: var(--danger-light); border-radius: 7px; padding: 4px 9px; font-size: .85rem; }
+.mistake-mode, .mistake-set-title, .mistake-card-bottom time, .mistake-source { color: var(--subtext); font-size: .78rem; }
+.mistake-prompt { font-size: 1.1rem; white-space: pre-wrap; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.mistake-detail summary { color: var(--primary); cursor: pointer; font-weight: 650; font-size: .85rem; }
+.mistake-full, .mistake-answer, .mistake-wrong { white-space: pre-wrap; overflow-wrap: anywhere; }
+.mistake-answer { padding: 12px; border-radius: 8px; background: var(--success-light); color: var(--success); }
+.mistake-wrong { color: var(--danger); }
+.mistake-card-bottom { border-top: 1px solid var(--line); margin-top: 16px; padding-top: 12px; }
+.mistake-pagination { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 24px; }
+.mistakes-footer { margin-top: 28px; font-size: .78rem; }
+@media (max-width: 600px) { .mistakes-heading { align-items: flex-start; flex-direction: column; } .mistake-filters label { flex: 1 1 100%; } .mistake-filters select { max-width: none; } .mistake-card { padding: 16px; } }
