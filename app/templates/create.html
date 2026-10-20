@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}퀴즈 만들기 · SAMSAM{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{{ asset_url('styles/create.css') }}">{% endblock %}
+{% block content %}
+<div class="create-layout shell">
+    <aside class="create-intro">
+        <span class="eyebrow">학습 세트 만들기</span>
+        <h1>세 단계로<br>퀴즈를 완성해요.</h1>
+        <p>기본 정보를 정하고 문항을 작성한 뒤 마지막으로 확인하세요.</p>
+        <ol class="step-list" aria-label="제작 단계">
+            <li class="active" data-step-indicator="1"><span>1</span><div><strong>기본 정보</strong><small>제목과 과목</small></div></li>
+            <li data-step-indicator="2"><span>2</span><div><strong>문항 작성</strong><small>질문과 정답</small></div></li>
+            <li data-step-indicator="3"><span>3</span><div><strong>확인·저장</strong><small>최종 검토</small></div></li>
+        </ol>
+    </aside>
+    <form id="quiz-form" class="create-form" novalidate>
+        <section class="wizard-panel form-card" data-step="1" aria-labelledby="quiz-info-title">
+            <div class="card-heading"><span class="step-badge">STEP 1</span><h2 id="quiz-info-title">퀴즈 기본 정보</h2><p>학생들이 내용을 쉽게 알아볼 수 있도록 작성해 주세요.</p></div>
+            <div class="form-field"><label for="quiz-title">퀴즈 제목 *</label><input id="quiz-title" name="title" type="text" maxlength="120" placeholder="예: 생명과학 핵심 개념" required></div>
+            <div class="form-field"><label for="quiz-subject">과목 *</label><input id="quiz-subject" name="subject" type="text" maxlength="50" pattern="\S+" placeholder="예: 생명과학" aria-describedby="subject-help subject-message" required><small id="subject-help">필터 기준으로 사용되므로 띄어쓰기 없이 입력해 주세요.</small><small id="subject-message" class="field-message" aria-live="polite"></small></div>
+            <div class="form-field"><label for="quiz-description">설명 <small>선택</small></label><textarea id="quiz-description" name="description" maxlength="1000" rows="3" placeholder="학습 범위와 목표를 간단히 적어 주세요."></textarea></div>
+            <div class="form-field"><label for="quiz-visibility">공개 범위</label><select id="quiz-visibility" name="visibility"><option value="public">공개 · 탐색 화면에 표시</option><option value="private">비공개 · 나와 공동 편집자만 접근</option></select></div>
+        </section>
+
+        <section class="wizard-panel" data-step="2" aria-labelledby="questions-title" hidden>
+            <div class="section-heading question-toolbar"><div><span class="step-badge">STEP 2</span><h2 id="questions-title">문항 작성</h2><small id="question-count">0개 문항</small></div></div>
+            <div id="questions"></div>
+            <button id="add-question-bottom" class="add-question-wide" type="button">+ 새 문항 추가</button>
+        </section>
+
+        <section class="wizard-panel form-card" data-step="3" aria-labelledby="review-title" hidden>
+            <div class="card-heading"><span class="step-badge">STEP 3</span><h2 id="review-title">저장 전 확인</h2><p>아래 내용이 맞는지 확인한 뒤 저장하세요.</p></div>
+            <div id="quiz-review" class="quiz-review"></div>
+        </section>
+
+        <div class="save-bar">
+            <button id="previous-step" class="button button-secondary button-large" type="button" hidden>이전 단계</button>
+            <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
+            <button id="next-step" class="button button-primary button-large" type="button">다음 단계</button>
+            <button id="submit-quiz" class="button button-primary button-large" type="submit" hidden>퀴즈 저장하기</button>
+        </div>
+    </form>
+</div>
+
+<template id="question-template">
+    <fieldset class="question-card">
+        <div class="question-head"><legend>문항 <span class="question-number"></span></legend><div class="question-actions"><button class="move-up text-button" type="button" aria-label="문항 위로 이동">↑</button><button class="move-down text-button" type="button" aria-label="문항 아래로 이동">↓</button><button class="duplicate-question text-button" type="button">복제</button><button class="remove-question text-button danger" type="button">삭제</button></div></div>
+        <div class="form-field"><label>학습 유형</label><select class="question-type"><option value="multiple_choice">객관식</option><option value="true_false">O / X</option><option value="flashcard">단어 카드</option><option value="fill_blank">빈칸 채우기</option></select></div>
+        <div class="form-field"><label>질문 *</label><textarea class="question-prompt" maxlength="1000" rows="3" placeholder="질문을 입력하세요." required></textarea></div>
+        <div class="fill-blank-preview" hidden><small>자동 생성될 빈칸</small><p></p></div>
+        <div class="image-field"><label class="image-picker">문제 사진 첨부<input class="image-input question-image-input" data-image-kind="question" type="file" accept="image/png,image/jpeg,image/webp"></label><small>PNG·JPEG·WebP, 최대 600KB</small><div class="image-preview" data-image-preview="question" hidden><img alt="문제 이미지 미리보기"><button class="remove-image text-button danger" data-image-kind="question" type="button">사진 삭제</button></div></div>
+        <div class="choices-label"><strong>선택지</strong><small>왼쪽 원을 눌러 정답을 지정하세요.</small></div>
+        <div class="choice-list" aria-label="선택지"></div>
+        <button class="add-choice text-button" type="button">+ 선택지 추가</button>
+        <div class="form-field explanation-field"><label>해설 <small>선택</small></label><textarea class="question-explanation" maxlength="2000" rows="2" placeholder="정답을 이해하는 데 필요한 설명을 적어 주세요."></textarea></div>
+        <div class="image-field explanation-image-field"><label class="image-picker">해설 사진 첨부<input class="image-input explanation-image-input" data-image-kind="explanation" type="file" accept="image/png,image/jpeg,image/webp"></label><small>PNG·JPEG·WebP, 최대 600KB</small><div class="image-preview" data-image-preview="explanation" hidden><img alt="해설 이미지 미리보기"><button class="remove-image text-button danger" data-image-kind="explanation" type="button">사진 삭제</button></div></div>
+    </fieldset>
+</template>
+<template id="choice-template"><div class="choice-row"><input class="correct-choice" type="radio" required><label class="visually-hidden">정답 선택</label><span class="choice-letter" aria-hidden="true"></span><input class="choice-text" type="text" maxlength="300" placeholder="선택지 입력" required><button class="remove-choice text-button danger" type="button">삭제</button></div></template>
+{% endblock %}
+{% block scripts %}<script type="module" src="{{ asset_url('pages/create.js') }}"></script>{% endblock %}

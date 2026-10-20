@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}매치 게임 · SAMSAM{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{{ asset_url('styles/match.css') }}">{% endblock %}
+{% block content %}
+<section class="match-page shell">
+    <a class="back-link" href="{{ url_for('main.index') }}#discover">← 학습 방식 선택</a>
+    <header><span class="eyebrow">매치 게임</span><h1 id="match-title">단어와 뜻을 연결해 보세요</h1><p><span id="match-progress">0 / 0</span> · <span id="match-time">0.0초</span></p></header>
+    <div id="match-board" class="match-board" aria-live="polite"></div>
+    <div id="match-result" class="match-result" hidden><h2>모든 짝을 찾았어요!</h2><p id="match-summary"></p><button id="match-retry" class="button button-primary" type="button">다시 하기</button></div>
+</section>
+{% endblock %}
+{% block scripts %}<script type="module" src="{{ asset_url('pages/match.js') }}"></script>{% endblock %}

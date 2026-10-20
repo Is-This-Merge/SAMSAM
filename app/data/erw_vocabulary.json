@@ -1,0 +1,1332 @@
+{
+  "source": "2026 ERW 1회고사 단어장 (1).pdf",
+  "coverage": "PDF 2–7쪽 어휘표 전체. 8–19쪽은 동일 항목의 연습용으로 중복 제외. 별표는 각주 표식이므로 제거. 원문 표기와 뜻은 보존.",
+  "groups": [
+    {
+      "key": "wasps",
+      "title": "Stinging Wasps",
+      "entries": [
+        {
+          "term": "comprehensive",
+          "meaning": "포괄적인",
+          "page": 2
+        },
+        {
+          "term": "voracious",
+          "meaning": "탐욕적인, 게걸스러운",
+          "page": 2
+        },
+        {
+          "term": "predators",
+          "meaning": "포식자",
+          "page": 2
+        },
+        {
+          "term": "venom",
+          "meaning": "독",
+          "page": 2
+        },
+        {
+          "term": "pollinate",
+          "meaning": "수분시키다, 수분하다",
+          "page": 2
+        },
+        {
+          "term": "pests",
+          "meaning": "해충",
+          "page": 2
+        },
+        {
+          "term": "resilient",
+          "meaning": "회복력이 강한",
+          "page": 2
+        },
+        {
+          "term": "entomologists",
+          "meaning": "곤충학자",
+          "page": 2
+        },
+        {
+          "term": "ancestor",
+          "meaning": "조상",
+          "page": 2
+        },
+        {
+          "term": "arthropods",
+          "meaning": "절지동물",
+          "page": 2
+        },
+        {
+          "term": "solitary",
+          "meaning": "혼자 사는, 고독한",
+          "page": 2
+        },
+        {
+          "term": "prey",
+          "meaning": "피식자, 먹잇감",
+          "page": 2
+        },
+        {
+          "term": "paralysed",
+          "meaning": "마비된",
+          "page": 2
+        },
+        {
+          "term": "antimicrobial",
+          "meaning": "항균성의",
+          "page": 2
+        },
+        {
+          "term": "saliva",
+          "meaning": "침",
+          "page": 2
+        },
+        {
+          "term": "nectar",
+          "meaning": "(꽃의) 꿀",
+          "page": 2
+        },
+        {
+          "term": "pollen",
+          "meaning": "꽃가루",
+          "page": 2
+        },
+        {
+          "term": "prejudice",
+          "meaning": "편견",
+          "page": 2
+        },
+        {
+          "term": "facets",
+          "meaning": "측면, 양상",
+          "page": 2
+        },
+        {
+          "term": "gaffer tape",
+          "meaning": "강력 접착 테이프",
+          "page": 2
+        },
+        {
+          "term": "invertebrate",
+          "meaning": "무척추의",
+          "page": 2
+        },
+        {
+          "term": "jointed legs",
+          "meaning": "관절이 있는 다리",
+          "page": 2,
+          "source_term": "jointed legs",
+          "source_meaning": "뼈 있는 다리",
+          "note": "원문 뜻 '뼈 있는 다리'를 관절 구조를 나타내는 뜻으로 수정했습니다."
+        },
+        {
+          "term": "stinging",
+          "meaning": "쏘는",
+          "page": 2
+        },
+        {
+          "term": "not pointless",
+          "meaning": "의미 없는 게 아닌",
+          "page": 2
+        },
+        {
+          "term": "orchids",
+          "meaning": "난초",
+          "page": 2
+        },
+        {
+          "term": "rely",
+          "meaning": "의존하다",
+          "page": 2
+        },
+        {
+          "term": "entirely",
+          "meaning": "전적으로",
+          "page": 2
+        },
+        {
+          "term": "cancer treatment",
+          "meaning": "암 치료",
+          "page": 2
+        },
+        {
+          "term": "yellowjackets",
+          "meaning": "땅 속에 사는 말벌",
+          "page": 2
+        },
+        {
+          "term": "hornets",
+          "meaning": "땅 위에 사는 말벌",
+          "page": 2
+        },
+        {
+          "term": "picnic pests",
+          "meaning": "소풍갈 때 보는 해충",
+          "page": 2
+        },
+        {
+          "term": "hoover up",
+          "meaning": "빨아들이다, 먹어치우다",
+          "page": 2
+        },
+        {
+          "term": "vegetable patch",
+          "meaning": "야채를 키우는 작은 땅",
+          "page": 2
+        },
+        {
+          "term": "plunging",
+          "meaning": "급락하는",
+          "page": 2
+        },
+        {
+          "term": "put A on the map",
+          "meaning": "A를 유명하게 만들다",
+          "page": 2
+        },
+        {
+          "term": "in terms of",
+          "meaning": "~라는 면에서",
+          "page": 2
+        },
+        {
+          "term": "parasitic",
+          "meaning": "기생하는",
+          "page": 2
+        },
+        {
+          "term": "insecticides",
+          "meaning": "살충제",
+          "page": 2
+        },
+        {
+          "term": "fall army worm",
+          "meaning": "열대거세미나방",
+          "page": 2
+        },
+        {
+          "term": "borer moth",
+          "meaning": "나무좀나방",
+          "page": 2
+        },
+        {
+          "term": "sugarcane",
+          "meaning": "사탕수수",
+          "page": 2
+        },
+        {
+          "term": "cocktail",
+          "meaning": "혼합물, 혼합체",
+          "page": 2,
+          "source_term": "cocktail",
+          "source_meaning": "섞이지 않는 물질들의 혼합체",
+          "note": "원문 뜻 '섞이지 않는 물질들의 혼합체'를 문맥상 혼합체의 뜻으로 정리했습니다."
+        },
+        {
+          "term": "property",
+          "meaning": "속성",
+          "page": 2
+        },
+        {
+          "term": "hunting wasp",
+          "meaning": "사냥벌",
+          "page": 2
+        },
+        {
+          "term": "exclusively",
+          "meaning": "오로지",
+          "page": 2
+        },
+        {
+          "term": "larvae",
+          "meaning": "유충",
+          "page": 2
+        },
+        {
+          "term": "harvest",
+          "meaning": "수확하다, 거둬들이다",
+          "page": 2
+        },
+        {
+          "term": "polymath",
+          "meaning": "박학다식한 사람 (박학하다, 박식하다)",
+          "page": 2
+        },
+        {
+          "term": "seal up",
+          "meaning": "밀폐하다",
+          "page": 2
+        },
+        {
+          "term": "give them credit",
+          "meaning": "~의 공로를 인정하다",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "key": "digital-detox",
+      "title": "Digital Detox",
+      "entries": [
+        {
+          "term": "antidote",
+          "meaning": "해독제",
+          "page": 3
+        },
+        {
+          "term": "binge/bingeing",
+          "meaning": "몰아서 하다/몰아서 하기",
+          "page": 3
+        },
+        {
+          "term": "bombarded",
+          "meaning": "(메시지를) 퍼붓듯이 받는",
+          "page": 3
+        },
+        {
+          "term": "crave/craving",
+          "meaning": "몹시 원하다, 갈망하다/갈망, 강렬한 욕구",
+          "page": 3
+        },
+        {
+          "term": "detrimental",
+          "meaning": "해로운, 유해한",
+          "page": 3
+        },
+        {
+          "term": "embrace",
+          "meaning": "받아들이다, 수용하다",
+          "page": 3
+        },
+        {
+          "term": "encroach",
+          "meaning": "잠식하다, 침해하다",
+          "page": 3
+        },
+        {
+          "term": "exacerbate",
+          "meaning": "악화시키다",
+          "page": 3
+        },
+        {
+          "term": "free rein",
+          "meaning": "재량, 제약 없는 자유",
+          "page": 3
+        },
+        {
+          "term": "hideaway",
+          "meaning": "은신처",
+          "page": 3
+        },
+        {
+          "term": "in vogue",
+          "meaning": "유행하는",
+          "page": 3
+        },
+        {
+          "term": "ingrained",
+          "meaning": "깊이 밴, 뿌리 깊은",
+          "page": 3
+        },
+        {
+          "term": "off-grid",
+          "meaning": "전기나 수도 등과 단절된",
+          "page": 3
+        },
+        {
+          "term": "phenomenal",
+          "meaning": "경이로운",
+          "page": 3
+        },
+        {
+          "term": "predilection",
+          "meaning": "애호, 특별히 좋아함",
+          "page": 3
+        },
+        {
+          "term": "quash/quashed",
+          "meaning": "진압하다, 억누르다/진압된, 억눌린",
+          "page": 3
+        },
+        {
+          "term": "rambler",
+          "meaning": "도보여행자",
+          "page": 3
+        },
+        {
+          "term": "resistant",
+          "meaning": "저항하는, 반대하는",
+          "page": 3
+        },
+        {
+          "term": "rudimentary",
+          "meaning": "기초적인, 초보의",
+          "page": 3
+        },
+        {
+          "term": "tiresome",
+          "meaning": "지치게 하는, 지루한",
+          "page": 3
+        },
+        {
+          "term": "torrential",
+          "meaning": "비가 퍼붓는, 억수같이 쏟아지는",
+          "page": 3
+        },
+        {
+          "term": "intrude",
+          "meaning": "침범하다, 침입하다",
+          "page": 3
+        },
+        {
+          "term": "seclude",
+          "meaning": "고립시키다, 격리하다",
+          "page": 3
+        },
+        {
+          "term": "suppress",
+          "meaning": "억압하다, (감정을) 참다",
+          "page": 3
+        },
+        {
+          "term": "bombard",
+          "meaning": "포격하다",
+          "page": 3
+        },
+        {
+          "term": "croach",
+          "meaning": "갈고리",
+          "page": 3,
+          "source_term": "croach",
+          "source_meaning": "갈고리",
+          "note": "원문에서 encroach의 어원 설명으로 사용한 표기입니다."
+        },
+        {
+          "term": "rein",
+          "meaning": "고삐",
+          "page": 3
+        },
+        {
+          "term": "grain",
+          "meaning": "곡물, 낟알, 알갱이",
+          "page": 3,
+          "source_term": "grain",
+          "source_meaning": "염류",
+          "note": "원문 뜻 표기에 오류가 있어 일반적인 뜻으로 수정했습니다."
+        },
+        {
+          "term": "grid",
+          "meaning": "격자",
+          "page": 3
+        },
+        {
+          "term": "ramble",
+          "meaning": "정처없이 걷다",
+          "page": 3,
+          "source_term": "reamble",
+          "source_meaning": "정처없이 걷다",
+          "note": "원문 표기: reamble. 철자를 ramble로 수정했습니다."
+        },
+        {
+          "term": "going cold turkey",
+          "meaning": "무엇인가를 갑자기 중단하는 것",
+          "page": 3
+        },
+        {
+          "term": "Lake District",
+          "meaning": "레이크 디스트릭 (영국 자연관광지 이름)",
+          "page": 3
+        },
+        {
+          "term": "screen-sick",
+          "meaning": "스크린 기기에 대해 싫증난 상태",
+          "page": 3
+        },
+        {
+          "term": "telly",
+          "meaning": "텔레비전의 영국식 표현",
+          "page": 3
+        },
+        {
+          "term": "phone signal",
+          "meaning": "통신 전파",
+          "page": 3
+        },
+        {
+          "term": "storm out",
+          "meaning": "화가 나서 뛰쳐 나가다",
+          "page": 3
+        },
+        {
+          "term": "thrilling scenery",
+          "meaning": "황홀한 광경",
+          "page": 3
+        },
+        {
+          "term": "draw",
+          "meaning": "마음을 끄는 것",
+          "page": 3
+        },
+        {
+          "term": "long for",
+          "meaning": "몹시 바라다",
+          "page": 3
+        },
+        {
+          "term": "craze",
+          "meaning": "열풍",
+          "page": 3
+        },
+        {
+          "term": "FitBits",
+          "meaning": "스마트워치 브랜드",
+          "page": 3
+        },
+        {
+          "term": "adore",
+          "meaning": "몹시(매우) 좋아하다",
+          "page": 3
+        },
+        {
+          "term": "flood of A",
+          "meaning": "A가 폭주, 쇄도하다",
+          "page": 3
+        },
+        {
+          "term": "publicity",
+          "meaning": "홍보, 광고",
+          "page": 3
+        },
+        {
+          "term": "lockdowns",
+          "meaning": "봉쇄조치",
+          "page": 3
+        },
+        {
+          "term": "Cumbrian",
+          "meaning": "컴브리아 지역의",
+          "page": 3
+        },
+        {
+          "term": "lane",
+          "meaning": "시골의 좁은 길",
+          "page": 3
+        },
+        {
+          "term": "sani loo",
+          "meaning": "간이 화장실의 영국식 표현",
+          "page": 3
+        },
+        {
+          "term": "cobwebby",
+          "meaning": "거미줄 투성이의",
+          "page": 3
+        },
+        {
+          "term": "hook up",
+          "meaning": "연결하다",
+          "page": 3
+        },
+        {
+          "term": "in view of",
+          "meaning": "~이 보이는 곳에서",
+          "page": 3
+        },
+        {
+          "term": "occasional",
+          "meaning": "이따금씩, 가끔 있는",
+          "page": 3
+        },
+        {
+          "term": "have A to yourself",
+          "meaning": "A를 혼자서 독차지하는",
+          "page": 3
+        },
+        {
+          "term": "get by",
+          "meaning": "그럭저럭해나가다",
+          "page": 3
+        },
+        {
+          "term": "hang out",
+          "meaning": "시간을 보내다",
+          "page": 3
+        },
+        {
+          "term": "trickle",
+          "meaning": "흐르다",
+          "page": 3
+        },
+        {
+          "term": "moorland",
+          "meaning": "황야 지역",
+          "page": 3
+        },
+        {
+          "term": "Uno",
+          "meaning": "카드게임이름",
+          "page": 3
+        },
+        {
+          "term": "come into their own",
+          "meaning": "진가를 발휘하다",
+          "page": 3
+        },
+        {
+          "term": "tear down",
+          "meaning": "전속력으로 질주하다",
+          "page": 3
+        },
+        {
+          "term": "slope",
+          "meaning": "비탈길",
+          "page": 4
+        },
+        {
+          "term": "scramble",
+          "meaning": "(손발을 써가며 헤치듯) 기어서 나가다",
+          "page": 4
+        },
+        {
+          "term": "hoots of response",
+          "meaning": "(상대의) 기쁨의 외침",
+          "page": 4
+        },
+        {
+          "term": "blur",
+          "meaning": "흐릿한 형태",
+          "page": 4
+        },
+        {
+          "term": "ant-sized forms",
+          "meaning": "개미 크기만한 형태",
+          "page": 4
+        },
+        {
+          "term": "stationed",
+          "meaning": "주둔한",
+          "page": 4
+        },
+        {
+          "term": "burst",
+          "meaning": "터짐",
+          "page": 4
+        },
+        {
+          "term": "spell with no wi-fi",
+          "meaning": "와이파이가 없는 기간",
+          "page": 4
+        },
+        {
+          "term": "switch off",
+          "meaning": "~으로부터 완전히 벗어난",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "key": "friendships",
+      "title": "Five Friendships",
+      "entries": [
+        {
+          "term": "catastrophic",
+          "meaning": "대참사의, 대재앙의",
+          "page": 5
+        },
+        {
+          "term": "confidence",
+          "meaning": "자신감",
+          "page": 5
+        },
+        {
+          "term": "cosmopolitan",
+          "meaning": "여러 문화에 익숙한, 국제적인",
+          "page": 5
+        },
+        {
+          "term": "cumulative",
+          "meaning": "점차 쌓이는, 누적되는",
+          "page": 5
+        },
+        {
+          "term": "cut it",
+          "meaning": "만족스럽다, 충분하다",
+          "page": 5
+        },
+        {
+          "term": "dropping in",
+          "meaning": "예고 없이 잠깐 들르다",
+          "page": 5
+        },
+        {
+          "term": "idyllic",
+          "meaning": "굉장히 행복한",
+          "page": 5
+        },
+        {
+          "term": "inadequate",
+          "meaning": "부족한, 미흡한",
+          "page": 5
+        },
+        {
+          "term": "monolithic",
+          "meaning": "단일한, (거대한) 하나의, 변화가 느린",
+          "page": 5
+        },
+        {
+          "term": "posit",
+          "meaning": "이론을 제시하다",
+          "page": 5
+        },
+        {
+          "term": "proximity",
+          "meaning": "근접함, 가까움",
+          "page": 5
+        },
+        {
+          "term": "slips (through fingers)",
+          "meaning": "기회 등이 (손가락 사이로) 빠져나가다",
+          "page": 5
+        },
+        {
+          "term": "slump",
+          "meaning": "털썩 주저앉다",
+          "page": 5
+        },
+        {
+          "term": "soul-searching",
+          "meaning": "자기 성찰, 깊은 고민",
+          "page": 5
+        },
+        {
+          "term": "spontaneity",
+          "meaning": "즉흥성",
+          "page": 5
+        },
+        {
+          "term": "tally",
+          "meaning": "일치하다, 부합하다",
+          "page": 5
+        },
+        {
+          "term": "thoughtless",
+          "meaning": "배려없는, 경솔한",
+          "page": 5
+        },
+        {
+          "term": "transient",
+          "meaning": "일시적인, 오래 머물지 않는",
+          "page": 5
+        },
+        {
+          "term": "twitch",
+          "meaning": "경련",
+          "page": 5
+        },
+        {
+          "term": "underpinned",
+          "meaning": "뒷받침이 된, 근간이 되어진",
+          "page": 5
+        },
+        {
+          "term": "gradually",
+          "meaning": "서서히, 차츰",
+          "page": 5
+        },
+        {
+          "term": "unified",
+          "meaning": "통일된, 통합된",
+          "page": 5
+        },
+        {
+          "term": "essential",
+          "meaning": "필수적인",
+          "page": 5
+        },
+        {
+          "term": "intimate",
+          "meaning": "친밀한",
+          "page": 5
+        },
+        {
+          "term": "optimal",
+          "meaning": "최적의",
+          "page": 5
+        },
+        {
+          "term": "scrape",
+          "meaning": "간신히 ~ 하다",
+          "page": 5
+        },
+        {
+          "term": "half-hearted",
+          "meaning": "진심이 반밖에 없는",
+          "page": 5
+        },
+        {
+          "term": "commute",
+          "meaning": "통근하다",
+          "page": 5
+        },
+        {
+          "term": "half the street",
+          "meaning": "길거리 주민의 절반",
+          "page": 5
+        },
+        {
+          "term": "awkwardness line",
+          "meaning": "어색함과 안 어색함의 경계",
+          "page": 5
+        },
+        {
+          "term": "on bad days",
+          "meaning": "컨디션이 안 좋은 날",
+          "page": 5
+        },
+        {
+          "term": "chaotic",
+          "meaning": "혼란스러운",
+          "page": 5
+        },
+        {
+          "term": "prioritising",
+          "meaning": "우선순위를 정하는 것",
+          "page": 5
+        },
+        {
+          "term": "manage not to A",
+          "meaning": "용케 A하지 않다",
+          "page": 5,
+          "source_term": "manage not to A",
+          "source_meaning": "용케 A 하지 하다",
+          "note": "원문 뜻 '용케 A 하지 하다'의 오기를 수정했습니다."
+        },
+        {
+          "term": "be keen to A",
+          "meaning": "A하기를 간절히 바라다",
+          "page": 5
+        },
+        {
+          "term": "minimum of two trains away",
+          "meaning": "최소 기차를 두 번 갈아 타는 곳",
+          "page": 5
+        },
+        {
+          "term": "housing costs",
+          "meaning": "집값",
+          "page": 5
+        },
+        {
+          "term": "state of childcare",
+          "meaning": "아이 돌봄 서비스",
+          "page": 5
+        },
+        {
+          "term": "social care",
+          "meaning": "사회 보장 제도",
+          "page": 5
+        },
+        {
+          "term": "career constraints",
+          "meaning": "직업적 제약",
+          "page": 5
+        },
+        {
+          "term": "ideally",
+          "meaning": "이상적으로",
+          "page": 5
+        },
+        {
+          "term": "Southern Rail",
+          "meaning": "현대의 영국 철도 회사의 이름",
+          "page": 5
+        },
+        {
+          "term": "scrolling",
+          "meaning": "(휴대폰을) 스크롤하는 것",
+          "page": 5
+        },
+        {
+          "term": "thrive",
+          "meaning": "번성하다",
+          "page": 5
+        },
+        {
+          "term": "parallel sofa-based scrolling",
+          "meaning": "소파에 나란히 앉아 핸드폰을 스크롤하는 것",
+          "page": 5
+        },
+        {
+          "term": "showing up",
+          "meaning": "나타나는 것, 함께 있는 것",
+          "page": 5
+        },
+        {
+          "term": "à la",
+          "meaning": "~풍의",
+          "page": 5
+        },
+        {
+          "term": "commune",
+          "meaning": "공동체",
+          "page": 5
+        },
+        {
+          "term": "thought experiment",
+          "meaning": "사고 실험",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "key": "new-start",
+      "title": "A New Start",
+      "entries": [
+        {
+          "term": "blindside",
+          "meaning": "허를 찌르다",
+          "page": 6
+        },
+        {
+          "term": "bout",
+          "meaning": "발병, 병 등의 한 차례",
+          "page": 6
+        },
+        {
+          "term": "clutch",
+          "meaning": "꽉 움켜쥐다",
+          "page": 6
+        },
+        {
+          "term": "constructive",
+          "meaning": "건설적인",
+          "page": 6
+        },
+        {
+          "term": "consultation",
+          "meaning": "상담",
+          "page": 6
+        },
+        {
+          "term": "critical",
+          "meaning": "매우 중요한, 위독한, 비판적인",
+          "page": 6
+        },
+        {
+          "term": "dimensions",
+          "meaning": "측면, 양상",
+          "page": 6
+        },
+        {
+          "term": "dyslexic",
+          "meaning": "난독증이 있는",
+          "page": 6
+        },
+        {
+          "term": "general practitioner",
+          "meaning": "(전문의가 아닌) 일반의, 가정의학과 의사",
+          "page": 6
+        },
+        {
+          "term": "gross",
+          "meaning": "역겨운, 너무하는",
+          "page": 6
+        },
+        {
+          "term": "holistic",
+          "meaning": "전인적인, 총체적인",
+          "page": 6
+        },
+        {
+          "term": "immense",
+          "meaning": "어마어마한",
+          "page": 6
+        },
+        {
+          "term": "missionary",
+          "meaning": "선교사",
+          "page": 6
+        },
+        {
+          "term": "plaited",
+          "meaning": "머리를 땋은",
+          "page": 6
+        },
+        {
+          "term": "practise",
+          "meaning": "전문직에 종사하다",
+          "page": 6
+        },
+        {
+          "term": "prompt",
+          "meaning": "신속한, 즉각적인",
+          "page": 6
+        },
+        {
+          "term": "reclaim",
+          "meaning": "다시 되찾다",
+          "page": 6
+        },
+        {
+          "term": "rejoice",
+          "meaning": "크게 기뻐하다",
+          "page": 6
+        },
+        {
+          "term": "treasure",
+          "meaning": "소중히 여기다",
+          "page": 6
+        },
+        {
+          "term": "turning point",
+          "meaning": "전환점",
+          "page": 6
+        },
+        {
+          "term": "blind",
+          "meaning": "안 보이는",
+          "page": 6
+        },
+        {
+          "term": "lexic",
+          "meaning": "(그리스 어원) 말, 단어, 언어",
+          "page": 6
+        },
+        {
+          "term": "unpleasant",
+          "meaning": "불쾌한, 불편한",
+          "page": 6
+        },
+        {
+          "term": "religious",
+          "meaning": "종교의, 종교적인",
+          "page": 6
+        },
+        {
+          "term": "interwoven",
+          "meaning": "밀접하게 얽힌, 짜인",
+          "page": 6
+        },
+        {
+          "term": "divorce",
+          "meaning": "이혼",
+          "page": 6
+        },
+        {
+          "term": "critical turning point",
+          "meaning": "결정적인 전환점",
+          "page": 6
+        },
+        {
+          "term": "come down with A",
+          "meaning": "병(A)에 걸리다",
+          "page": 6
+        },
+        {
+          "term": "put a size on things",
+          "meaning": "~의 크기를 가늠하다",
+          "page": 6
+        },
+        {
+          "term": "something to get up for each morning",
+          "meaning": "살아갈 의욕(목적)이 있다",
+          "page": 6
+        },
+        {
+          "term": "living through",
+          "meaning": "고통을 가지고 살아내다",
+          "page": 6
+        },
+        {
+          "term": "hang on",
+          "meaning": "버티다",
+          "page": 6
+        },
+        {
+          "term": "pulled over",
+          "meaning": "잠시 주차하다",
+          "page": 6
+        },
+        {
+          "term": "Presbyterian",
+          "meaning": "장로교신자",
+          "page": 6
+        },
+        {
+          "term": "licence plate",
+          "meaning": "개인 번호판",
+          "page": 6
+        },
+        {
+          "term": "MD",
+          "meaning": "의학 박사 (Doctor of Medicine)",
+          "page": 6
+        },
+        {
+          "term": "take on A",
+          "meaning": "A를 띠다",
+          "page": 6
+        }
+      ]
+    },
+    {
+      "key": "endurance",
+      "title": "Endurance",
+      "entries": [
+        {
+          "term": "afflicted",
+          "meaning": "(병이나 고통에 의해) 시달리는, 괴로워하는",
+          "page": 7
+        },
+        {
+          "term": "barrier",
+          "meaning": "장벽, 장애물",
+          "page": 7
+        },
+        {
+          "term": "biting",
+          "meaning": "(바람이나 추위가) 살을 에는 듯한",
+          "page": 7
+        },
+        {
+          "term": "circumvent",
+          "meaning": "(장애물을) 우회하다, 피하다",
+          "page": 7
+        },
+        {
+          "term": "clamber",
+          "meaning": "기어서 올라가다",
+          "page": 7
+        },
+        {
+          "term": "convulsed",
+          "meaning": "경련하는, 몸을 떠는",
+          "page": 7
+        },
+        {
+          "term": "decamp",
+          "meaning": "자리를 뜨다, 자리를 떠나 이동하다",
+          "page": 7
+        },
+        {
+          "term": "dysentery",
+          "meaning": "이질 (심한 설사를 동반할 수 있는 장 감염)",
+          "page": 7
+        },
+        {
+          "term": "extraordinary",
+          "meaning": "비범한, 놀라운",
+          "page": 7
+        },
+        {
+          "term": "feat",
+          "meaning": "위업, 업적",
+          "page": 7
+        },
+        {
+          "term": "floe",
+          "meaning": "유빙 (바다에 둥둥 떠다니는 얼음)",
+          "page": 7
+        },
+        {
+          "term": "gale",
+          "meaning": "강풍, 센바람",
+          "page": 7
+        },
+        {
+          "term": "interminably",
+          "meaning": "오래 끝나지 않는, 끝도 없이",
+          "page": 7
+        },
+        {
+          "term": "keepsake",
+          "meaning": "기념품, 정표",
+          "page": 7
+        },
+        {
+          "term": "outcrop",
+          "meaning": "노두 (땅 위로 드러난 암석의 돌출부)",
+          "page": 7
+        },
+        {
+          "term": "painstaking",
+          "meaning": "공들인, 힘들여하는, 꼼꼼한",
+          "page": 7
+        },
+        {
+          "term": "recuperation",
+          "meaning": "회복, 요양",
+          "page": 7
+        },
+        {
+          "term": "stowaway",
+          "meaning": "밀항자, 무임탑승자",
+          "page": 7
+        },
+        {
+          "term": "surge",
+          "meaning": "솟구침",
+          "page": 7
+        },
+        {
+          "term": "uninhabited",
+          "meaning": "사람이 살지 않는",
+          "page": 7
+        },
+        {
+          "term": "affliction",
+          "meaning": "시달림",
+          "page": 7
+        },
+        {
+          "term": "afflict",
+          "meaning": "괴롭히다, 시달리게 하다",
+          "page": 7
+        },
+        {
+          "term": "convulse",
+          "meaning": "경련하다, 심하게 떨다",
+          "page": 7
+        },
+        {
+          "term": "camp",
+          "meaning": "야영지",
+          "page": 7
+        },
+        {
+          "term": "keep",
+          "meaning": "간직하다",
+          "page": 7
+        },
+        {
+          "term": "stow away",
+          "meaning": "몰래 타다",
+          "page": 7
+        },
+        {
+          "term": "inhabit",
+          "meaning": "거주하다",
+          "page": 7
+        },
+        {
+          "term": "diarrhea",
+          "meaning": "설사",
+          "page": 7
+        },
+        {
+          "term": "Lost and Found",
+          "meaning": "무언가를 잃어버리고 다시 찾음",
+          "page": 7,
+          "source_term": "last and found",
+          "source_meaning": "무언가를 잃어버리고 다시 찾음",
+          "note": "원문 표기: last and found. 기사 제목에 맞춰 lost and found로 수정했습니다."
+        },
+        {
+          "term": "Shackleton",
+          "meaning": "영국 탐험가의 이름",
+          "page": 7
+        },
+        {
+          "term": "Endurance",
+          "meaning": "인듀런스호 (배 이름)",
+          "page": 7
+        },
+        {
+          "term": "epic",
+          "meaning": "(영웅의 노래를 부른) 서사시",
+          "page": 7
+        },
+        {
+          "term": "sea ice",
+          "meaning": "얼음이 뒤덮인 바다",
+          "page": 7
+        },
+        {
+          "term": "ran into",
+          "meaning": "문제를 맞닥뜨리다",
+          "page": 7
+        },
+        {
+          "term": "customs officer",
+          "meaning": "세관원",
+          "page": 7
+        },
+        {
+          "term": "outbreak",
+          "meaning": "발발",
+          "page": 7
+        },
+        {
+          "term": "ticket stub",
+          "meaning": "반쪽을 자른 표",
+          "page": 7
+        },
+        {
+          "term": "chronic",
+          "meaning": "만성적인",
+          "page": 7
+        },
+        {
+          "term": "condition",
+          "meaning": "질환",
+          "page": 7
+        },
+        {
+          "term": "surgery",
+          "meaning": "수술",
+          "page": 7
+        },
+        {
+          "term": "abandoned",
+          "meaning": "포기하다",
+          "page": 7
+        },
+        {
+          "term": "on to A",
+          "meaning": "A를 향해서",
+          "page": 7
+        },
+        {
+          "term": "three open lifeboats",
+          "meaning": "구명 보트 3개",
+          "page": 7
+        },
+        {
+          "term": "navigational tools",
+          "meaning": "나침반과 같은 도구",
+          "page": 7
+        },
+        {
+          "term": "possess",
+          "meaning": "마음을 다스리다",
+          "page": 7
+        },
+        {
+          "term": "sea sickness",
+          "meaning": "멀미",
+          "page": 7
+        },
+        {
+          "term": "party",
+          "meaning": "무리",
+          "page": 7
+        },
+        {
+          "term": "second in command",
+          "meaning": "부지휘관",
+          "page": 7
+        },
+        {
+          "term": "tossed",
+          "meaning": "이리저리 흔들린",
+          "page": 7
+        },
+        {
+          "term": "every surge of the sea",
+          "meaning": "바다의 개별적인 솟구침",
+          "page": 7
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ session.get('csrf_token', '') }}">
+    <meta name="theme-color" content="#855b36">
+    <meta name="description" content="SASA 학생들의 암기 학습을 함께 쌓아가는 사암사암">
+    <link rel="stylesheet" href="{{ asset_url('styles/var.css') }}">
+    <link rel="stylesheet" href="{{ asset_url('styles/common.css') }}">
+    <link rel="icon" href="{{ asset_url('assets/image/icon.png') }}">
+    {% block styles %}{% endblock %}
+    <title>{% block title %}SAMSAM{% endblock %}</title>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="주요 메뉴">
+            <a class="brand" href="{{ url_for('main.index') }}" aria-label="사암사암 홈">
+                <img class="brand-logo" src="{{ asset_url('assets/samsamicon.png') }}" alt="">
+                <span class="brand-name">사암사암</span>
+            </a>
+            <div class="nav-links">
+                <a href="{{ url_for('main.index') }}#discover"{% if request.path == '/' %} aria-current="page"{% endif %}>탐색</a>
+                <a href="{{ url_for('main.mistakes_page') }}"{% if request.path == '/mistakes.html' %} aria-current="page"{% endif %}>오답 노트</a>
+                <a href="{{ url_for('main.create_page') }}"{% if request.path == '/create.html' %} aria-current="page"{% endif %}>퀴즈 만들기</a>
+                <a href="{{ url_for('main.inventory') }}"{% if request.path == '/inventory.html' %} aria-current="page"{% endif %}>내 학습실</a>
+                <a href="{{ url_for('main.info') }}"{% if request.path == '/info.html' %} aria-current="page"{% endif %}>이용 안내</a>
+            </div>
+            <div class="nav-actions">
+                {% if current_user %}
+                    <a class="user-link" href="{{ url_for('main.mypage') }}" aria-label="내 프로필 보기">
+                        {% if current_user.picture_url %}<img src="{{ current_user.picture_url }}" alt="" referrerpolicy="no-referrer">{% else %}<span class="user-avatar" aria-hidden="true">{{ current_user.display_name[:1] }}</span>{% endif %}
+                        <span>{{ current_user.display_name }}</span>
+                    </a>
+                {% else %}
+                    <a class="button button-ghost" href="{{ url_for('auth.login_page') }}">회원가입·로그인</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+    <main id="main-content">{% block content %}{% endblock %}</main>
+    <footer class="site-footer">
+        <div class="footer-inner shell"><p>&copy; Team 쌈싸먹는 고라니. All rights reserved.</p></div>
+    </footer>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

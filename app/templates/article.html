@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}본문 · 해석 읽기 · SAMSAM{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{{ asset_url('styles/article.css') }}">{% endblock %}
+{% block content %}
+<section class="shell article-reader">
+    <a id="reader-back" class="back-link" href="/">← 학습 방식 선택</a>
+    <header class="reader-header"><p class="eyebrow">READ & UNDERSTAND</p><h1 id="reader-title">본문 · 해석 읽기</h1><p>기사 전체를 문단별로 읽어 보세요.</p></header>
+    <div class="reader-toolbar">
+        <label for="reader-mode">읽기 방식</label>
+        <select id="reader-mode"><option value="both">원문 + 해석</option><option value="original">원문만</option><option value="translation">해석만</option></select>
+        <span id="reader-count"></span>
+    </div>
+    <p id="reader-status" role="status">본문을 불러오고 있어요…</p>
+    <div id="reader-passages" data-mode="both"></div>
+    <p id="reader-source" class="reader-source"></p>
+</section>
+{% endblock %}
+{% block scripts %}<script type="module" src="{{ asset_url('pages/article.js') }}"></script>{% endblock %}

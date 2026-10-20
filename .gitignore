@@ -1,5 +1,17 @@
 .idea
 pybo.db
+samsam.db
+.env
+.env.*
+!.env.example
+.venv/
+venv/
 *.pyc
 __pycache__
 logs
+IMPLEMENTATION_PLAN.md
+projectContext.md
+instance/*.db
+instance/*.db-*
+tmp/
+.pytest_cache/

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}내 프로필 · SAMSAM{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{{ asset_url('styles/account.css') }}">{% endblock %}
+{% block content %}
+<section class="account-card shell profile-card profile-dashboard">
+    {% if current_user.picture_url %}<img src="{{ current_user.picture_url }}" alt="" referrerpolicy="no-referrer">{% endif %}
+    <span class="eyebrow">내 프로필</span>
+    <h1>{{ current_user.display_name }}</h1>
+    <p>{{ current_user.email }}</p>
+    <div class="stats-grid profile-stats" aria-label="내 학습 통계">
+        <div><strong>{{ stats.attempt_count }}</strong><span>학습 횟수</span></div>
+        <div><strong>{{ stats.studied_quiz_count }}</strong><span>학습한 퀴즈</span></div>
+        <div><strong>{{ stats.average_score }}</strong><span>평균 점수</span></div>
+        <div><strong>{{ stats.best_score }}</strong><span>최고 점수</span></div>
+    </div>
+    <div class="profile-actions">
+        <a class="button button-primary" href="{{ url_for('main.inventory') }}">내 학습실 보기</a>
+        <form action="{{ url_for('auth.logout') }}" method="post">
+            <input type="hidden" name="csrf_token" value="{{ session.get('csrf_token', '') }}">
+            <button class="profile-logout" type="submit">로그아웃</button>
+        </form>
+    </div>
+</section>
+{% endblock %}
